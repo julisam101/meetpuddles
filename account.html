@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Cuddle Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🧸 Cuddle Cart</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="coverpage.html">Home</a></li>
+                <li><a href="aboutpuddles.html">About Puddles</a></li>
+                <li><a href="ourmission.html">Our Mission</a></li>
+                <li><a href="getpuddles.html">Get Puddles</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+                <li><a href="account.html">👤 Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Account Hero -->
+    <section class="account-hero">
+        <div class="container">
+            <h1>Your Cuddle Cart Account</h1>
+            <p>Track your orders, manage your profile, and enjoy exclusive benefits</p>
+        </div>
+    </section>
+
+    <!-- Login / Sign Up Toggle -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div class="auth-form login-form" id="loginForm">
+                <h2>Welcome Back! 💙</h2>
+                <p class="auth-subtitle">Log in to your account</p>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="remember-me" name="remember">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg">Log In</button>
+                </form>
+                
+                <p class="auth-toggle">Don't have an account? <a href="#" onclick="toggleAuth(); return false;">Sign up here</a></p>
+                <p class="forgot-password"><a href="#reset">Forgot your password?</a></p>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="auth-form signup-form" id="signupForm" style="display: none;">
+                <h2>Join Cuddle Cart! 💖</h2>
+                <p class="auth-subtitle">Create your account and start your journey</p>
+                
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" placeholder="Juan Lopez" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-password">Create Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" name="confirm" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Send me updates about new Cuddle Cart products and exclusive offers</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+                </form>
+                
+                <p class="auth-toggle">Already have an account? <a href="#" onclick="toggleAuth(); return false;">Log in here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Features -->
+    <section class="account-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Create an Account?</h2>
+                <p>Enjoy a personalized Cuddle Cart experience</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">📦</div>
+                    <h3>Track Your Orders</h3>
+                    <p>Monitor your Puddles from production to your doorstep. Real-time updates on your shipment status.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">💾</div>
+                    <h3>Saved Preferences</h3>
+                    <p>Save your favorite color preferences, sizes, and customization options for faster checkout.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">💌</div>
+                    <h3>Exclusive Updates</h3>
+                    <p>Be the first to know about new Puddles colors, outfits, limited editions, and special releases.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Loyalty Rewards</h3>
+                    <p>Earn points with every purchase. Redeem them for discounts, free items, or exclusive merchandise.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">📝</div>
+                    <h3>Order History</h3>
+                    <p>Keep track of all your Cuddle Cart purchases in one convenient dashboard.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Recommendations</h3>
+                    <p>Get custom suggestions based on your interests and browsing history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Benefits -->
+    <section class="account-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Exclusive Member Benefits 🌟</h2>
+            </div>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="benefit-number">✨</span>
+                    <div class="benefit-content">
+                        <h3>Early Access</h3>
+                        <p>Access new Puddles colors and outfits 48 hours before they're available to the public.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-number">🎉</span>
+                    <div class="benefit-content">
+                        <h3>Birthday Gift</h3>
+                        <p>Get a special discount or surprise gift during your birthday month!</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-number">📮</span>
+                    <div class="benefit-content">
+                        <h3>Free Shipping Threshold</h3>
+                        <p>Enjoy free shipping on orders over $50. Members get free shipping over $40!</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-number">🤝</span>
+                    <div class="benefit-content">
+                        <h3>Referral Program</h3>
+                        <p>Invite friends and earn credits for every successful purchase they make.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Privacy Info -->
+    <section class="security-info">
+        <div class="container">
+            <div class="section-header">
+                <h2>We Protect Your Privacy 🔒</h2>
+                <p>Your trust is our most treasured asset</p>
+            </div>
+            
+            <div class="security-grid">
+                <div class="security-card">
+                    <h3>Secure Encryption</h3>
+                    <p>All your data is encrypted with industry-standard SSL security. Your information is safe with us.</p>
+                </div>
+                
+                <div class="security-card">
+                    <h3>No Sharing</h3>
+                    <p>We never sell or share your personal information with third parties without your consent.</p>
+                </div>
+                
+                <div class="security-card">
+                    <h3>GDPR Compliant</h3>
+                    <p>We respect international privacy standards and your right to control your data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Cuddle Cart</h4>
+                    <p>Bringing comfort to the world, one plush at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="coverpage.html">Home</a></li>
+                        <li><a href="aboutpuddles.html">About Puddles</a></li>
+                        <li><a href="ourmission.html">Our Mission</a></li>
+                        <li><a href="getpuddles.html">Get Puddles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="account.html">My Account</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact.cuddlecart@gmail.com</p>
+                    <p>📍 Port Chester, NY</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cuddle Cart. Made with 💙 and 💖</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAuth() {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            }
+        }
+        
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            alert(`Welcome back, ${email}! 💙\n\nYour account dashboard will load shortly.`);
+            event.target.reset();
+        }
+        
+        function handleSignup(event) {
+            event.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const password = document.getElementById('signup-password').value;
+            const confirm = document.getElementById('signup-confirm').value;
+            
+            if (password !== confirm) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            alert(`Welcome to Cuddle Cart, ${name}! 💖\n\nYour account has been created. Check your email for a confirmation link!`);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
