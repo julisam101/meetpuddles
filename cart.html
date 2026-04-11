@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Cuddle Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🧸 Cuddle Cart</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="coverpage.html">Home</a></li>
+                <li><a href="aboutpuddles.html">About Puddles</a></li>
+                <li><a href="ourmission.html">Our Mission</a></li>
+                <li><a href="getpuddles.html">Get Puddles</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+                <li><a href="account.html">👤 Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Hero -->
+    <section class="cart-hero">
+        <div class="container">
+            <h1>Your Shopping Cart 🛒</h1>
+            <p>Review your items before checking out</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-content">
+        <div class="container">
+            <div class="cart-grid">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div id="emptyCart" class="empty-cart">
+                        <div class="empty-icon">🛒</div>
+                        <h2>Your cart is empty</h2>
+                        <p>Time to cuddle up! Browse our collection and find your perfect Puddles companion.</p>
+                        <a href="getpuddles.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+                    
+                    <div id="cartItems" class="cart-items-list" style="display: none;">
+                        <!-- Sample cart item (will be populated by JavaScript in real implementation) -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h2>Order Summary</h2>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping">Calculated at checkout</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span id="tax">Calculated at checkout</span>
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-lg" style="width: 100%; margin-top: var(--space-lg);">
+                            Proceed to Checkout
+                        </button>
+                        
+                        <a href="getpuddles.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--space-md); text-align: center;">
+                            Continue Shopping
+                        </a>
+                    </div>
+
+                    <!-- Promo Code -->
+                    <div class="summary-card promo-card">
+                        <h3>Have a Promo Code?</h3>
+                        <div class="promo-input">
+                            <input type="text" placeholder="Enter code" id="promoCode">
+                            <button class="btn btn-secondary" onclick="applyPromo()">Apply</button>
+                        </div>
+                        <p class="promo-note">Valid codes: WELCOME10, CUDDLE15, FRIEND20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Info -->
+    <section class="shipping-info">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shipping Details 📦</h2>
+            </div>
+            
+            <div class="shipping-grid">
+                <div class="shipping-card">
+                    <h3>Domestic Shipping (US)</h3>
+                    <p><strong>$10 - $15</strong></p>
+                    <p>Delivery time: 5-7 business days after production</p>
+                </div>
+                
+                <div class="shipping-card">
+                    <h3>International Shipping</h3>
+                    <p><strong>Starting at $15</strong></p>
+                    <p>Varies by destination. Calculated at checkout.</p>
+                </div>
+                
+                <div class="shipping-card">
+                    <h3>Free Shipping</h3>
+                    <p><strong>Orders over $50</strong></p>
+                    <p>Members get free shipping on orders over $40!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Shop With Us -->
+    <section class="shop-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Shop with Cuddle Cart? 💖</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Premium Quality</h3>
+                    <p>Every Puddles is crafted with high-quality faux rabbit fur and careful attention to detail.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Ethical Sourcing</h3>
+                    <p>We prioritize sustainable materials and ethical manufacturing practices globally.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">❤️</div>
+                    <h3>Mission-Driven</h3>
+                    <p>Your purchase helps us bring comfort to people dealing with loneliness worldwide.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Customer Support</h3>
+                    <p>Questions? Email us at contact.cuddlecart@gmail.com - we're here to help!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-items">
+                <details class="faq-item">
+                    <summary>How do I track my order?</summary>
+                    <p>Once your order ships, you'll receive a tracking number via email. Log into your account to see real-time updates!</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Can I change my order after I've purchased?</summary>
+                    <p>Contact us immediately at contact.cuddlecart@gmail.com. We'll do our best to help if it hasn't already shipped!</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What if my Puddles arrives damaged?</summary>
+                    <p>We're committed to quality! Contact us with photos and we'll replace it at no cost. We stand behind our plushies.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Do you offer international shipping?</summary>
+                    <p>Yes! We ship worldwide. Shipping costs vary by destination and will be calculated at checkout.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What's your return policy?</summary>
+                    <p>We want you to love your Puddles! Contact us within 30 days of delivery for returns or exchanges.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Cuddle Cart</h4>
+                    <p>Bringing comfort to the world, one plush at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="coverpage.html">Home</a></li>
+                        <li><a href="aboutpuddles.html">About Puddles</a></li>
+                        <li><a href="ourmission.html">Our Mission</a></li>
+                        <li><a href="getpuddles.html">Get Puddles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="account.html">My Account</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact.cuddlecart@gmail.com</p>
+                    <p>📍 Port Chester, NY</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cuddle Cart. Made with 💙 and 💖</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function applyPromo() {
+            const code = document.getElementById('promoCode').value.toUpperCase();
+            const validCodes = ['WELCOME10', 'CUDDLE15', 'FRIEND20'];
+            
+            if (validCodes.includes(code)) {
+                alert(`✨ Promo code ${code} applied! Discount will be calculated at checkout.`);
+                document.getElementById('promoCode').value = '';
+            } else {
+                alert('❌ Invalid promo code. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
