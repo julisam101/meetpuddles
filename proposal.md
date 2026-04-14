@@ -30,7 +30,7 @@
 - Style: clean style, 
 
 **Inspiration sites:**
-- jellycat
-- build a bear
-- get a hug 
+- jellycat : fun, whimsical feeing
+- build a bear : homey, friendly feeling
+- get a hug : clean, fun website that works with different fonts, colors, etc. 
 
