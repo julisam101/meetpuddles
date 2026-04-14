@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Puddles - Cuddle Cart</title>
+    <meta name="description" content="Get your own Puddles - a soft comfort companion designed to ease loneliness and bring warmth.">
+    <meta name="theme-color" content="#FFB6D9">
+    <meta property="og:title" content="Get Puddles - Cuddle Cart">
+    <meta property="og:description" content="Get your own Puddles - a soft comfort companion designed to ease loneliness.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cuddlecart.com/getpuddles.html">
+    <meta property="og:image" content="https://cuddlecart.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Get Puddles">
+    <meta name="twitter:description" content="Get your own Puddles comfort companion today.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
                 <h1>🧸 Cuddle Cart</h1>
             </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">☰</label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+            <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
             <ul class="nav-links">
                 <li><a href="coverpage.html">Home</a></li>
                 <li><a href="aboutpuddles.html">About Puddles</a></li>
                 <li><a href="ourmission.html">Our Mission</a></li>
-                <li><a href="getpuddles.html">Get Puddles</a></li>
+                <li><a href="getpuddles.html" aria-current="page">Get Puddles</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="cart.html">🛒 Cart</a></li>
                 <li><a href="account.html">👤 Account</a></li>
             </ul>
+            <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
         </div>
     </nav>
 
@@ -195,5 +208,7 @@
             event.target.reset();
         }
     </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
