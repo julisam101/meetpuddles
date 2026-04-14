@@ -120,6 +120,57 @@ body {
     }
 }
 
+/* Mobile Navigation */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--space-xs);
+    border-radius: var(--radius-sm);
+    transition: background 0.3s ease;
+}
+
+.nav-toggle-label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-blue) 100%);
+        flex-direction: column;
+        padding: var(--space-md);
+        box-shadow: var(--shadow-medium);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        gap: var(--space-sm);
+    }
+    
+    .nav-toggle:checked ~ .nav-links {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar .container {
+        position: relative;
+    }
+}
+
 /* ===================================
    HERO SECTION
    =================================== */
@@ -901,6 +952,57 @@ footer {
     .social-btn {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --space-lg: 1rem;
+        --space-md: 0.75rem;
+        --space-sm: 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .puddles-shape {
+        width: 150px;
+        height: 180px;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .card {
+        padding: var(--space-md);
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .container {
+        padding: 0 var(--space-md);
     }
 }
 
