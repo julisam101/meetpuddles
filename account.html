@@ -22,10 +22,9 @@
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
-                <h1>🧸 Cuddle Cart</h1>
+                <h1><span>Cuddle</span><span>Cart 🧸</span></h1>
             </div>
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
-            <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
             <ul class="nav-links">
                 <li><a href="coverpage.html">Home</a></li>
                 <li><a href="aboutpuddles.html">About Puddles</a></li>
@@ -35,7 +34,10 @@
                 <li><a href="cart.html">🛒 Cart</a></li>
                 <li><a href="account.html" aria-current="page">👤 Account</a></li>
             </ul>
-            <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            <div class="nav-controls">
+                <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
+                <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            </div>
         </div>
     </nav>
 
@@ -132,37 +134,91 @@
             
             <div class="features-grid">
                 <div class="feature-box">
-                    <div class="feature-icon">📦</div>
+                    <div class="feature-scene scene-tracking">
+                        <div class="mini-puddles">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                        <span class="scene-tag">On the way</span>
+                    </div>
                     <h3>Track Your Orders</h3>
                     <p>Monitor your Puddles from production to your doorstep. Real-time updates on your shipment status.</p>
                 </div>
                 
                 <div class="feature-box">
-                    <div class="feature-icon">💾</div>
+                    <div class="feature-scene scene-preferences">
+                        <div class="mini-puddles">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                        <span class="scene-tag">Saved favorites</span>
+                    </div>
                     <h3>Saved Preferences</h3>
                     <p>Save your favorite color preferences, sizes, and customization options for faster checkout.</p>
                 </div>
                 
                 <div class="feature-box">
-                    <div class="feature-icon">💌</div>
+                    <div class="feature-scene scene-updates">
+                        <div class="mini-puddles">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                        <span class="scene-tag">Cozy news</span>
+                    </div>
                     <h3>Exclusive Updates</h3>
                     <p>Be the first to know about new Puddles colors, outfits, limited editions, and special releases.</p>
                 </div>
                 
                 <div class="feature-box">
-                    <div class="feature-icon">🎁</div>
+                    <div class="feature-scene scene-rewards">
+                        <div class="mini-puddles">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                        <span class="scene-tag">Perks unlocked</span>
+                    </div>
                     <h3>Loyalty Rewards</h3>
                     <p>Earn points with every purchase. Redeem them for discounts, free items, or exclusive merchandise.</p>
                 </div>
                 
                 <div class="feature-box">
-                    <div class="feature-icon">📝</div>
+                    <div class="feature-scene scene-history">
+                        <div class="mini-puddles">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                        <span class="scene-tag">Memory shelf</span>
+                    </div>
                     <h3>Order History</h3>
                     <p>Keep track of all your Cuddle Cart purchases in one convenient dashboard.</p>
                 </div>
                 
                 <div class="feature-box">
-                    <div class="feature-icon">🎯</div>
+                    <div class="feature-scene scene-recommendations">
+                        <div class="mini-puddles">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                        <span class="scene-tag">Picked for you</span>
+                    </div>
                     <h3>Personalized Recommendations</h3>
                     <p>Get custom suggestions based on your interests and browsing history.</p>
                 </div>
@@ -179,7 +235,15 @@
             
             <div class="benefits-list">
                 <div class="benefit-item">
-                    <span class="benefit-number">✨</span>
+                    <div class="benefit-scene scene-early-access">
+                        <div class="mini-puddles mini-puddles-small">
+                            <div class="mini-puddles-body"></div>
+                            <div class="mini-puddles-head"></div>
+                            <div class="mini-puddles-eye left"></div>
+                            <div class="mini-puddles-eye right"></div>
+                            <div class="mini-puddles-belly"></div>
+                        </div>
+                    </div>
                     <div class="benefit-content">
                         <h3>Early Access</h3>
                         <p>Access new Puddles colors and outfits 48 hours before they're available to the public.</p>
@@ -187,7 +251,7 @@
                 </div>
                 
                 <div class="benefit-item">
-                    <span class="benefit-number">🎉</span>
+                    <div class="benefit-scene scene-birthday"></div>
                     <div class="benefit-content">
                         <h3>Birthday Gift</h3>
                         <p>Get a special discount or surprise gift during your birthday month!</p>
@@ -195,7 +259,7 @@
                 </div>
                 
                 <div class="benefit-item">
-                    <span class="benefit-number">📮</span>
+                    <div class="benefit-scene scene-shipping"></div>
                     <div class="benefit-content">
                         <h3>Free Shipping Threshold</h3>
                         <p>Enjoy free shipping on orders over $50. Members get free shipping over $40!</p>
@@ -203,7 +267,7 @@
                 </div>
                 
                 <div class="benefit-item">
-                    <span class="benefit-number">🤝</span>
+                    <div class="benefit-scene scene-referral"></div>
                     <div class="benefit-content">
                         <h3>Referral Program</h3>
                         <p>Invite friends and earn credits for every successful purchase they make.</p>
@@ -223,16 +287,19 @@
             
             <div class="security-grid">
                 <div class="security-card">
+                    <div class="security-scene scene-secure"></div>
                     <h3>Secure Encryption</h3>
                     <p>All your data is encrypted with industry-standard SSL security. Your information is safe with us.</p>
                 </div>
                 
                 <div class="security-card">
+                    <div class="security-scene scene-private"></div>
                     <h3>No Sharing</h3>
                     <p>We never sell or share your personal information with third parties without your consent.</p>
                 </div>
                 
                 <div class="security-card">
+                    <div class="security-scene scene-gdpr"></div>
                     <h3>GDPR Compliant</h3>
                     <p>We respect international privacy standards and your right to control your data.</p>
                 </div>
