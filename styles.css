@@ -161,6 +161,32 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    width: 100%;
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    max-width: 100%;
+}
+
+.is-hidden {
+    display: none;
+}
+
 /* Focus visible for accessibility */
 *:focus-visible {
     outline: 2px solid var(--color-dark-pink);
@@ -393,6 +419,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xxl);
     align-items: center;
+    width: 100%;
 }
 
 .hero-content {
@@ -440,6 +467,8 @@ body {
     transition: all 0.3s ease;
     font-family: var(--font-primary);
     text-align: center;
+    max-width: 100%;
+    white-space: normal;
 }
 
 .btn-primary {
@@ -473,6 +502,22 @@ body {
 .btn-lg {
     padding: var(--space-md) var(--space-xl);
     font-size: 1.1rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.mt-md {
+    margin-top: var(--space-md);
+}
+
+.mt-lg {
+    margin-top: var(--space-lg);
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* ===================================
@@ -1386,9 +1431,10 @@ select:valid ~ .form-success {
     gap: var(--space-lg);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
     }
 }
 
@@ -1399,6 +1445,58 @@ select:valid ~ .form-success {
 .contact-section {
     padding: var(--space-xxl) 0;
     background: linear-gradient(135deg, rgba(168, 216, 240, 0.1) 0%, rgba(255, 182, 217, 0.1) 100%);
+}
+
+.contact-alt-section {
+    margin-top: var(--space-xxl);
+    text-align: center;
+}
+
+.contact-alt-title {
+    color: var(--color-dark-pink);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-display);
+}
+
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.contact-method-card {
+    background: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-method-title {
+    color: var(--color-dark-pink);
+    margin-bottom: var(--space-sm);
+}
+
+.contact-method-link {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+}
+
+.contact-method-link:hover {
+    text-decoration: underline;
+}
+
+.social-section-compact {
+    margin-top: var(--space-xxl);
+    background: transparent;
+    padding: 0;
+}
+
+.social-section-title {
+    color: var(--color-dark-pink);
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-display);
 }
 
 .page-link-card h3 {
@@ -1638,6 +1736,19 @@ select:valid ~ .form-success {
     
     .timeline-marker {
         left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 58px;
+    }
+
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1.15rem;
     }
 }
 
@@ -2321,6 +2432,7 @@ select:valid ~ .form-success {
 
 .promo-input input {
     flex: 1;
+    min-width: 0;
     padding: var(--space-md);
     border: 2px solid #E0E0E0;
     border-radius: var(--radius-md);
@@ -2527,6 +2639,61 @@ select:valid ~ .form-success {
 
 .hero-visual {
     animation: float 4s ease-in-out infinite;
+}
+
+.puddles-photo-frame {
+    margin: 0;
+    width: min(100%, 460px);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 4px solid rgba(255, 182, 217, 0.45);
+    box-shadow: var(--shadow-medium);
+    padding: 0.6rem;
+    overflow: hidden;
+}
+
+.puddles-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: calc(var(--radius-lg) - 10px);
+}
+
+.puddles-photo-frame-lg {
+    width: min(100%, 560px);
+}
+
+.puddles-photo-frame-wide {
+    width: min(100%, 820px);
+    margin: 0 auto;
+}
+
+.photo-showcase {
+    padding: var(--space-xxl) 0;
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-light-gray) 100%);
+}
+
+.puddles-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+    align-items: start;
+}
+
+.puddles-gallery .puddles-photo-frame-wide {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .puddles-photo-frame {
+        width: min(100%, 420px);
+        margin: 0 auto;
+    }
+
+    .puddles-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Print Styles */
